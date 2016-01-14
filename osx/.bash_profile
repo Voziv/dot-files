@@ -71,10 +71,10 @@ setjdk 1.8
 ################################################################################
 
 # The next line updates PATH for the Google Cloud SDK.
-source '/Users/lrobert/google-cloud-sdk/path.bash.inc'
+source '~/google-cloud-sdk/path.bash.inc'
 
 # The next line enables shell command completion for gcloud.
-source '/Users/lrobert/google-cloud-sdk/completion.bash.inc'
+source '~/google-cloud-sdk/completion.bash.inc'
 
 ################################################################################
 #
