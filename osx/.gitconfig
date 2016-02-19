@@ -1,11 +1,13 @@
 [core]
 	excludesfile = ~/.gitignore_global
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = ~/bin/git-diff-cmd.sh
+	path =
+[mergetool]
+	cmd = ~/bin/git-diff-cmd.sh
+	tool = opendiff
 	trustExitCode = true
+	keepBackup = false
 [user]
 	name = Change Me
 	email = changeme@example.com
@@ -13,7 +15,7 @@
 [alias]
 	lol = log --graph --decorate --pretty=oneline --abbrev-commit --all
 	st = status -s
-	ci = commit -v
+	ci = commit -am
 	co = checkout
 	br = branch
 	unstage = reset HEAD --
@@ -28,3 +30,11 @@
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
 	required = true
+[push]
+	default = simple
+
+[merge]
+        keepBackup = false
+        keepTemporaries = false
+        trustExitCode = false
+        tool = p4merge
