@@ -1,3 +1,5 @@
+test -e ${HOME}/.iterm2_shell_integration.bash && source ${HOME}/.iterm2_shell_integration.bash
+
 ################################################################################
 #
 # Variables
@@ -5,6 +7,11 @@
 ################################################################################
 # export HOMEBREW_GITHUB_API_TOKEN=
 HISTFILESIZE=50000
+
+# Bash completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
 
 ################################################################################
 #
@@ -14,6 +21,7 @@ HISTFILESIZE=50000
 export PATH="/usr/local/git/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="~/.composer/vendor/bin:$PATH"
+export PATH="~/dev/altctrl/tools/bin:$PATH"
 export PATH="~/.bin:$PATH"
 
 ################################################################################
@@ -46,7 +54,8 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 
 alias ls='ls -GFh'
 alias ll='ls -lAh'
-
+alias dc='docker-compose'
+alias fs='docker-local farside'
 
 ################################################################################
 #
@@ -89,7 +98,8 @@ source '~/google-cloud-sdk/completion.bash.inc'
 ################################################################################
 
 # Docker
-eval "$(docker-machine env default)"
+#eval "$(docker-machine env default)"
+eval "$(dinghy env)"
 
 ################################################################################
 #
@@ -109,3 +119,5 @@ function iterm2_print_user_vars() {
 #
 ################################################################################
 
+# added by Anaconda3 4.2.0 installer
+export PATH="~/anaconda3/bin:$PATH"
