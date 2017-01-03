@@ -16,6 +16,7 @@
     lol = log --graph --decorate --pretty=oneline --abbrev-commit --all
     wow = log --all --graph --decorate --oneline --simplify-by-decoration
     st = status -s
+    stag = tag --sort=v:refname
     ci = commit -am
     fp = fetch --all --prune
     co = checkout
