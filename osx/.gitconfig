@@ -1,43 +1,43 @@
 [core]
-	excludesfile = ~/.gitignore_global
+    excludesfile = ~/.gitignore_global
 [difftool "sourcetree"]
-	cmd = ~/bin/git-diff-cmd.sh
-	path =
+    cmd = ~/bin/git-diff-cmd.sh
+    path =
 [mergetool]
-	cmd = ~/bin/git-diff-cmd.sh
-	tool = opendiff
-	trustExitCode = true
-	keepBackup = false
+    cmd = ~/bin/git-diff-cmd.sh
+    tool = opendiff
+    trustExitCode = true
+    keepBackup = false
 [user]
-	name = Change Me
-	email = changeme@example.com
+    name = Change Me
+    email = changeme@example.com
 
 [alias]
-	lol = log --graph --decorate --pretty=oneline --abbrev-commit --all
-        wow = log --all --graph --decorate --oneline --simplify-by-decoration
-	st = status -s
-	ci = commit -am
-        fp = fetch --all --prune
-	co = checkout
-	br = branch
-	unstage = reset HEAD --
-	last = log -1 HEAD
-	fetch-all = fetch --all --prune
-        hist = log --pretty=format:'%C(red)%h%Creset %C(bold blue)%ad%Creset | %s%d %C(yellow)[%an]%Creset' --graph --date=short
-  	l = log --date=short --pretty=format:'%C(bold blue)%cd %Creset%C(red)%h%Creset%C(auto)%d %Creset%C(normal)%s %Creset%C(bold blue)(%Creset%C(yellow)%an %Creset%C(bold blue)%cr)%Creset' --color --graph --decorate --all
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    wow = log --all --graph --decorate --oneline --simplify-by-decoration
+    st = status -s
+    ci = commit -am
+    fp = fetch --all --prune
+    co = checkout
+    br = branch
+    unstage = reset HEAD --
+    last = log -1 HEAD
+    fetch-all = fetch --all --prune
+    hist = log --pretty=format:'%C(red)%h%Creset %C(bold blue)%ad%Creset | %s%d %C(yellow)[%an]%Creset' --graph --date=short
+    l = log --date=short --pretty=format:'%C(bold blue)%cd %Creset%C(red)%h%Creset%C(auto)%d %Creset%C(normal)%s %Creset%C(bold blue)(%Creset%C(yellow)%an %Creset%C(bold blue)%cr)%Creset' --color --graph --decorate --all
 [filter "hawser"]
-	clean = git hawser clean %f
-	smudge = git hawser smudge %f
-	required = true
+    clean = git hawser clean %f
+    smudge = git hawser smudge %f
+    required = true
 [filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
-	required = true
+    clean = git-lfs clean %f
+    smudge = git-lfs smudge %f
+    required = true
 [push]
-	default = simple
+    default = simple
 
 [merge]
-        keepBackup = false
-        keepTemporaries = false
-        trustExitCode = false
-        tool = p4merge
+    keepBackup = false
+    keepTemporaries = false
+    trustExitCode = false
+    tool = p4merge
